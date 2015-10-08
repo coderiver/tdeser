@@ -1,5 +1,4 @@
 head.ready(function() {
-
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });
@@ -15,5 +14,9 @@ head.ready(function() {
 	//     scrollFixedElements()
 	// });
 
-	console.log($('body').html());
+	$('.js-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
 });
+
