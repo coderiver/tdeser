@@ -60,9 +60,39 @@
 	font-weight: normal
 
 body
+	min-width: 320px
 	font-size: 12px
 	line-height: 1.4
 	+rob
+	&.menu-opened
+		overflow: hidden
+		background-color: #212121
+
+.out
+	&.menu-opened
+		perspective: 1000px
+		transform-style: preserve-3d
+		+tr(transform 0.3s ease)
+		.header
+			-webkit-transform: rotateY(-35deg) translateX(-220px)
+			-moz-transform: rotateY(-35deg) translateX(-220px)
+			-ms-transform: rotateY(-35deg) translateX(-220px)
+			-o-transform: rotateY(-35deg) translateX(-220px)
+			transform: rotateY(-35deg) translateX(-220px)
 
 a
 	text-decoration: none
+
+.overlay
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(#212121, 0.5)
+	opacity: 0
+	visibility: hidden
+	+tr(0.25s ease)
+	&.is-visible
+		opacity: 1
+		visibility: visible
