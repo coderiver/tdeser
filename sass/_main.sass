@@ -34,7 +34,7 @@
 		background-repeat: no-repeat
 		+r(950)
 			max-width: 524px
-		+r(600)
+		+r(640)
 			max-width: 295px
 	&__ttl,
 	&__work
@@ -47,7 +47,7 @@
 		+rob-l
 		+r(950)
 			font-size: 48px
-		+r(600)
+		+r(640)
 			font-size: 30px
 			margin: 95px 0 42px 0
 	&__work
@@ -69,7 +69,7 @@
 			float: left
 		+r(950)
 			font-size: 15px
-		+r(600)
+		+r(640)
 			&__work
 				padding-top: 30px
 			&-bl
@@ -83,8 +83,11 @@
 //main slider
 .slider
 	&__bl
+		display: none
 		height: 810px
 		+cover
+		&:first-child
+			display: block
 	.slick-prev, .slick-next
 		margin-top: -7px
 		z-index: 10
@@ -148,7 +151,7 @@
 		color: #fff
 		line-height: 1
 		+opacity(0.7)
-	+r(600)
+	+r(640)
 		&__name
 			display: none
 
@@ -156,21 +159,30 @@
 .get
 	background: #212121
 	color: #fff
+	&__in
+		font-size: 0
+		text-align: justify
+		&:after
+			content: ""
+			display: inline-block
+			width: 100%
 	&__note
-		float: left
-		max-width: 240px
-		padding-top: 20px
+		display: inline-block
+		max-width: 260px
+		margin-right: 20px
+		text-align: left
 		font-family: "Times New Roman"
 		font-size: 20px
 		font-style: italic
 		color: #727272
 		line-height: 0.9
+		vertical-align: middle
 		&.is-mobile
 			display: none
-
 	&__list
-		float: left
+		display: inline-block
 		font-size: 0
+		vertical-align: middle
 		li
 			display: inline-block
 			padding: 25px 20px
@@ -190,51 +202,146 @@
 		&:hover
 			text-decoration: underline
 	&__quote
-		float: right
-		padding-top: 15px
+		display: inline-block
 		font-size: 0
-		p
-			display: inline-block
-			margin-right: 70px
-			font-family: "Times New Roman"
-			font-size: 20px
-			font-style: italic
-			color: #727272
-			vertical-align: middle
+		vertical-align: middle
+	&__or
+		display: inline-block
+		margin-right: 70px
+		font-family: "Times New Roman"
+		font-size: 20px
+		font-style: italic
+		color: #727272
+		vertical-align: middle
+		line-height: 1
 	&__arr
-		float: left
-		margin: 30px 30px 0 40px
+		display: inline-block
+		vertical-align: middle
 		+svg(arr-right-long, 30, 11)
 	+r(1280)
 		&__list
-			li:last-child
-				display: none
-		&__arr
-			margin: 30px 0 0 0
-		&__quote
-			p
-				margin-right: 30px
+			li
+				border-right: none
+				&:first-child
+					border-right: 1px solid #383838
+				&:last-child
+					display: none
+		&__or
+			margin-right: 25px
 	+r(1000)
 		&__list
 			li
 				display: none
-				border-right: none
 				&:first-child
 					display: block
-
+					border-right: none
+	+r(765)
+		&__note
+			width: 30%
+			margin-right: 0
+	+r(700)
+		&__in
+			padding: 15.5px 0
+		&__note
+			width: auto
+		&__list
+			display: none
+		&__or
+			display: none
+	+r(520)
+		&__in
+			padding: 20px 0
+			text-align: left
+			+clr
+		&__note
+			display: none
+			&.is-mobile
+				display: inline-block
+		&__arr
+			float: right
+			+svg(arr-down-long, 11, 20)
 
 .get-ico
 	margin-right: 15px
 	+svg(lines, 18, 11)
 
 .btn_quote
+	position: relative
 	display: inline-block
 	padding: 5px 10px
 	font-size: 18px
-	border: 2px solid #646464
 	border-radius: 5px
+	border: 2px solid #646464
 	color: #FFF
 	vertical-align: middle
+	&:hover
+		.btn__left,
+		.btn__right
+			opacity: 1
+		.btn__top,
+		.btn__bottom
+			&:before,
+			&:after
+				width: 100%
+	.btn__top,
+	.btn__bottom
+		position: absolute
+		top: -2px
+		bottom: -2px
+		left: 1px
+		right: 1px
+		border-radius: 5px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			width: 0
+			height: 2px
+			+gh(#c1010c, #001eff)
+			+transition(width 0.2s)
+		&:before
+			top: 0
+			left: 0
+		&:after
+			top: 0
+			right: 0
+	.btn__bottom
+		&:before
+			top: initial
+			bottom: 0
+			left: 0
+		&:after
+			top: initial
+			bottom: 0
+			right: 0
+	.btn__left,
+	.btn__right
+		position: absolute
+		top: -2px
+		bottom: -2px
+		width: 5px
+		overflow: hidden
+		opacity: 0
+		+transition(opacity 0.4s)
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 20px
+			border: 2px solid #c1010c
+			border-radius: 5px
+	.btn__left
+		left: -2px
+		&:before
+			left: 0
+	.btn__right
+		right: -2px
+		&:before
+			right: 0
+			border-color: #001eff
+	+r(520)
+		display: none
 
 //menu
 .menu
@@ -298,20 +405,81 @@
 	.logo__name
 		text-align: center
 	.menu
-		margin: 54px 0 69px
+		margin: 54px 0
 		text-align: center
 	.menu__li
 		margin: 0 0 26px 0
 	.menu__link
 		padding: 5px 0
+	.get
+		text-align: center
+		background: none
+	.get__note
+		display: block
+		max-width: 200px
+		margin: 0 auto 20px
+		padding-top: 23px
+		text-align: center
+		border-top: 1px solid #383838
+	.btn_quote
+		display: inline-block
 	&.is-active
 		right: 0
 	@media screen and (orientation:landscape)
 		.menu
-			margin: 26px 0 43px
+			margin: 26px 0 37px
 		.menu__li
 			margin: 0 0 6px 0
+		.get__note
+			display: none
 
 .arr-down
 	margin-left: 10px
 	+svg(arr-down, 9, 10)
+
+.close-ico
+	position: absolute
+	top: 28px
+	right: 18px
+	width: 20px
+	height: 16px
+	cursor: pointer
+	&.is-active
+		&:before,
+		&:after
+			-webkit-transform-origin: left 50%
+			-moz-transform-origin: left 50%
+			-ms-transform-origin: left 50%
+			-o-transform-origin: left 50%
+			transform-origin: left 50%
+		&:before
+			+transform(rotateZ(45deg))
+		&:after
+			+transform(rotateZ(-45deg))
+		span
+			visibility: hidden
+			opacity: 0
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		background: #fff
+		height: 2px
+		+transition(0.3s ease 0.4s)
+	&:before
+		top: 0
+	&:after
+		bottom: 0
+	span
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		height: 2px
+		margin-top: -1px
+		background: #FFF
+		visibility: visible
+		opacity: 1
+		+transition(0.3s ease 0.4s)

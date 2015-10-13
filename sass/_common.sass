@@ -63,23 +63,54 @@ body
 	min-width: 320px
 	font-size: 12px
 	line-height: 1.4
+	-webkit-transition-delay: 0.5s
+	-moz-transition-delay: 0.5s
+	-ms-transition-delay: 0.5s
+	-o-transition-delay: 0.5s
+	transition-delay: 0.5s
 	+rob
 	&.menu-opened
 		overflow: hidden
 		background-color: #212121
+		+transition(background-color 0.1s)
+
+
 
 .out
+	perspective: 1000px
+	transform-style: preserve-3d
+	+tr(0.3s ease)
 	&.menu-opened
-		perspective: 1000px
-		transform-style: preserve-3d
-		+tr(transform 0.3s ease)
 		.transform-bl
 			-webkit-transform: rotateY(-35deg) translateX(-210px)
 			-moz-transform: rotateY(-35deg) translateX(-210px)
 			-ms-transform: rotateY(-35deg) translateX(-210px)
 			-o-transform: rotateY(-35deg) translateX(-210px)
 			transform: rotateY(-35deg) translateX(-210px)
-			+tr(transform 0.4s ease)
+		+r(520)
+			.transform-bl
+				-webkit-transform: rotateY(-45deg) translateX(-210px)
+				-moz-transform: rotateY(-45deg) translateX(-210px)
+				-ms-transform: rotateY(-45deg) translateX(-210px)
+				-o-transform: rotateY(-45deg) translateX(-210px)
+				transform: rotateY(-45deg) translateX(-210px)
+		+r(480)
+			.transform-bl
+				-webkit-transform: rotateY(-55deg) translateX(-210px)
+				-moz-transform: rotateY(-55deg) translateX(-210px)
+				-ms-transform: rotateY(-55deg) translateX(-210px)
+				-o-transform: rotateY(-55deg) translateX(-210px)
+				transform: rotateY(-55deg) translateX(-210px)
+		+r(320)
+			.transform-bl
+				-webkit-transform: rotateY(-55deg) translateX(-297px)
+				-moz-transform: rotateY(-55deg) translateX(-297px)
+				-ms-transform: rotateY(-55deg) translateX(-297px)
+				-o-transform: rotateY(-55deg) translateX(-297px)
+				transform: rotateY(-55deg) translateX(-297px)
+
+.transform-bl
+	+tr(0.4s ease)
 
 a
 	text-decoration: none
@@ -90,7 +121,7 @@ a
 	left: 0
 	right: 0
 	bottom: 0
-	background-color: rgba(#212121, 0.5)
+	background-color: rgba(#212121, 0.8)
 	opacity: 0
 	visibility: hidden
 	+tr(0.25s ease)
