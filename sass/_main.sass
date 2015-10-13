@@ -1,7 +1,6 @@
 .header
 	position: relative
 	background-color: rgba(#000, 0.5)
-	+tr(transform 0.4s ease)
 	&__top
 		position: absolute
 		top: 0
@@ -153,6 +152,90 @@
 		&__name
 			display: none
 
+// get quote
+.get
+	background: #212121
+	color: #fff
+	&__note
+		float: left
+		max-width: 240px
+		padding-top: 20px
+		font-family: "Times New Roman"
+		font-size: 20px
+		font-style: italic
+		color: #727272
+		line-height: 0.9
+		&.is-mobile
+			display: none
+
+	&__list
+		float: left
+		font-size: 0
+		li
+			display: inline-block
+			padding: 25px 20px
+			font-size: 15px
+			border-right: 1px solid #383838
+			vertical-align: middle
+			&:last-child
+				border-right: none
+			span
+				margin-right: 10px
+				font-family: "Times New Roman"
+				font-size: 15px
+				font-style: italic
+				color: #727272
+	&__link
+		color: #FFF
+		&:hover
+			text-decoration: underline
+	&__quote
+		float: right
+		padding-top: 15px
+		font-size: 0
+		p
+			display: inline-block
+			margin-right: 70px
+			font-family: "Times New Roman"
+			font-size: 20px
+			font-style: italic
+			color: #727272
+			vertical-align: middle
+	&__arr
+		float: left
+		margin: 30px 30px 0 40px
+		+svg(arr-right-long, 30, 11)
+	+r(1280)
+		&__list
+			li:last-child
+				display: none
+		&__arr
+			margin: 30px 0 0 0
+		&__quote
+			p
+				margin-right: 30px
+	+r(1000)
+		&__list
+			li
+				display: none
+				border-right: none
+				&:first-child
+					display: block
+
+
+.get-ico
+	margin-right: 15px
+	+svg(lines, 18, 11)
+
+.btn_quote
+	display: inline-block
+	padding: 5px 10px
+	font-size: 18px
+	border: 2px solid #646464
+	border-radius: 5px
+	color: #FFF
+	vertical-align: middle
+
 //menu
 .menu
 	float: right
@@ -229,3 +312,6 @@
 		.menu__li
 			margin: 0 0 6px 0
 
+.arr-down
+	margin-left: 10px
+	+svg(arr-down, 9, 10)
