@@ -47,6 +47,8 @@
 		color: #000000
 		text-decoration: none
 		font-size: 13px
+		b
+			font-weight: normal
 		span
 			display: inline-block
 			background: #fff
@@ -73,9 +75,8 @@
 				position: relative
 				top: -1px
 		&:hover
-			i
-				position: relative
-				top: 2px
+			b
+				text-decoration: underline
 	.works__wrap
 		margin-right: -8px
 		+r(980)
@@ -86,15 +87,16 @@
 	width: 309px
 	margin-bottom: 45px
 	vertical-align: top
+	position: relative
 	+r(1280)
 		width: 308px
 	+r(980)
 		width: 31%
 		margin-right: 1%
 	+r(630)
-		width: 47% 
-		margin-right: 2% 
-		margin-bottom: 28px 
+		width: 47%
+		margin-right: 2%
+		margin-bottom: 28px
 	.work__image
 		background: #f6f6f6
 		margin-bottom: 24px
@@ -111,7 +113,7 @@
 		img
 			display: inline-block
 			vertical-align: middle
-			max-width: 80% 
+			max-width: 80%
 	.work__title
 		text-align: center
 		font-weight: normal
@@ -119,12 +121,12 @@
 		font-size: 20px
 		+rob-l
 		line-height: 1
-		color: #000 
+		color: #000
 		+r(630)
 			+rob
-			font-size: 15px 
-			line-height: 1.1 
-			color: #000000 
+			font-size: 15px
+			line-height: 1.1
+			color: #000000
 
 	.work__tags
 		font-size: 12px
@@ -135,7 +137,7 @@
 		// &:hover .work__image
 		// 	transform: rotateY(180deg)
 	.work__image
-		transition: 0.6s
+		transition: 0.5s
 		transform-style: preserve-3d
 		position: relative
 	.work__front, .work__back
@@ -148,23 +150,35 @@
 		transform: rotateY(0deg)
 	.work__back
 		transform: rotateY(180deg)
-		background: #282828 
+		background: #282828
 		position: absolute
 		top: 0
 		left: 0
 		bottom: 0
 		right: 0
-		font-size: 15px 
+		font-size: 15px
 		text-align: center
-		color: #fff 
-		line-height: 20px 
-		padding-top: 100px 
+		color: #fff
+		line-height: 20px
+		padding-top: 100px
 		i
-			font-size: 20px 
+			font-size: 20px
 		p
-			padding: 0 15% 
-			margin-top: 20px 
+			padding: 0 15%
+			margin-top: 20px
+	&:before
+		content: ' '
+		position: absolute
+		top: -10px
+		left: 10px
+		right: 10px
+		bottom: -10px
+		border: 3px solid #E5E5E5
+		transition: all .5s linear
+		opacity: 0 
 	&:hover
+		&:before
+			opacity: 1 
 		.work__title
 			text-decoration: underline
 		.work__image
