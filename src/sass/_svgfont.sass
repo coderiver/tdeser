@@ -1,0 +1,65 @@
+@font-face
+	font-family: "svgfont"
+	src: url('fonts/svgfont.eot')
+	src: url('fonts/svgfont.eot?#iefix') format('eot'), url('fonts/svgfont.woff') format('woff'), url('fonts/svgfont.woff2') format('woff2'), url('fonts/svgfont.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+$icon-arr-down-long: "\EA01"
+$icon-arr-down: "\EA02"
+$icon-arr-right-long: "\EA03"
+$icon-be: "\EA04"
+$icon-dr: "\EA05"
+$icon-fb: "\EA06"
+$icon-in: "\EA07"
+$icon-lines: "\EA08"
+$icon-location: "\EA09"
+$icon-logo: "\EA0A"
+$icon-next: "\EA0B"
+$icon-prev: "\EA0C"
+$icon-tw: "\EA0D"
+$icon-grid: "\EA0E"
+
+
+%icon
+	font-family: "svgfont"
+	font-style: normal
+	font-weight: normal
+	text-rendering: auto
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon, [class^="icon-"], [class*=" icon-"]
+	@extend %icon
+	display: inline-block
+
+.icon-arr-down-long:before
+	content: $icon-arr-down-long
+.icon-arr-down:before
+	content: $icon-arr-down
+.icon-arr-right-long:before
+	content: $icon-arr-right-long
+.icon-be:before
+	content: $icon-be
+.icon-dr:before
+	content: $icon-dr
+.icon-fb:before
+	content: $icon-fb
+.icon-in:before
+	content: $icon-in
+.icon-lines:before
+	content: $icon-lines
+.icon-location:before
+	content: $icon-location
+.icon-logo:before
+	content: $icon-logo
+.icon-next:before
+	content: $icon-next
+.icon-prev:before
+	content: $icon-prev
+.icon-tw:before
+	content: $icon-tw
+.icon-grid:before
+	content: $icon-grid

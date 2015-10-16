@@ -1,0 +1,177 @@
+.footer__bottom
+	background: #212121
+	padding: 50px 0 60px 0
+	+clr
+	+r(560)
+		padding: 25px 0 38px 0
+	.footer__copy,.footer__copyholder
+		float: left
+		width: 25%
+		font-size: 13px
+		line-height: 18px
+		opacity: .4
+		color: #fff
+		padding-top: 8px
+		+r(1280)
+			width: percentage(240/940)
+		+r(860)
+			width: percentage(230/730)
+	.footer__copyholder
+		+r(860)
+			display: none
+	.footer__copy
+		position: absolute
+		left: 0
+		top: 0
+		+r(860)
+			float: left
+			width: 40%
+			position: static
+			clear: both
+			padding-top: 30px
+		+r(560)
+			width: auto
+			float: none
+			clear: both
+			padding-top: 23px
+			text-align: center
+			margin-bottom: 29px
+	.footer__links
+		float: left
+		width: 12.5%
+		list-style: none
+		font-size: 18px
+		+r(1280)
+			width: percentage(140/940)
+		+r(860)
+			width: percentage(210/730)
+		+r(700)
+			width: percentage(160/600)
+		+r(560)
+			width: percentage(99/280)
+		a
+			line-height: 30px
+			color: #fff
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.footer__contacts
+		float: left
+		width: 25%
+		list-style: none
+		line-height: 18px
+		padding-top: 8px
+		color: #fff
+		font-size: 13px
+		position: relative
+		z-index: 20
+		+r(1280)
+			width: percentage(250/940)
+		+r(860)
+			width: percentage(230/730)
+		+r(700)
+			width: percentage(230/600)
+		+r(560)
+			width: percentage(180/280)
+		li
+			margin-bottom: 12px
+		span
+			font-family: "Times New Roman",serif
+			font-size: 15px
+			line-height: 18px
+			opacity: .4
+			font-style: italic
+			display: inline-block
+			width: 60px
+	.footer__location
+		width: 23%
+		float: left
+		font-size: 13px
+		line-height: 15px
+		color: #fff
+		padding-top: 10px
+		position: relative
+		+r(1280)
+			width: percentage(224/940)
+			float: right
+		+r(860)
+			width: percentage(230/730)
+		+r(700)
+			width: 160px
+		+r(560)
+			display: none
+		&:before
+			width: 14px
+			height: 21px
+			position: absolute
+			content: ' '
+			left: -28px
+			top: 4px
+			z-index: 10
+			@extend %icon
+			content: $icon-location
+			font-size: 21px 
+		&:after
+			position: absolute
+			height: 99px
+			content: ' '
+			width: 196px
+			background: url(../img/map.png) no-repeat 0 0
+			left: -134px
+			top: -10px
+		p
+			position: relative
+			z-index: 20
+	.footer__socials
+		float: right
+		width: 160px
+		padding-top: 7px
+		+r(1280)
+			float: none
+			clear: both
+		+r(860)
+			width: percentage(230/730)
+			float: right
+			clear: right
+			padding-top: 30px
+		+r(700)
+			width: 160px
+		+r(560)
+			width: auto
+			text-align: center
+			padding-top: 0
+			float: none
+		h3
+			font-weight: normal
+			font-family: "Times New Roman", serif
+			font-style: italic
+			color: #fff
+			opacity: .4
+			font-size: 15px
+			line-height: 18px
+			margin-bottom: 16px
+		a
+			font-size: 16px
+			text-decoration: none
+			color: #4d4d4d
+			margin-right: 14px
+			&:last-child
+				margin-right: 0
+			&:hover
+				color: #fff
+.footer__in
+	max-width: 1260px
+	margin: 0 auto
+	position: relative
+	+clr
+	+r(1340)
+		margin: 0 auto
+	+r(1300)
+		margin: 0 20px
+	+r(1280)
+		max-width: 940px
+		margin: 0 auto
+	+r(980)
+		margin: 0 20px
+	+r(768)
+		margin: 0 20px
