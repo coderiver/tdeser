@@ -36,6 +36,8 @@
 			position: relative
 			top: -2px
 		&:hover
+			span
+				text-decoration: underline
 			i
 				color: #000
 	.works__viewmore
@@ -117,12 +119,53 @@
 		font-size: 20px
 		+rob-l
 		line-height: 1
+		color: #000 
 		+r(630)
 			+rob
 			font-size: 15px 
 			line-height: 1.1 
 			color: #000000 
+
 	.work__tags
 		font-size: 12px
 		color: #aaaaaa
 		text-align: center
+	.work__flipper
+		perspective: 1000
+		// &:hover .work__image
+		// 	transform: rotateY(180deg)
+	.work__image
+		transition: 0.6s
+		transform-style: preserve-3d
+		position: relative
+	.work__front, .work__back
+		backface-visibility: hidden
+		position: absolute
+		top: 0
+		left: 0
+	.work__front
+		z-index: 2
+		transform: rotateY(0deg)
+	.work__back
+		transform: rotateY(180deg)
+		background: #282828 
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		font-size: 15px 
+		text-align: center
+		color: #fff 
+		line-height: 20px 
+		padding-top: 100px 
+		i
+			font-size: 20px 
+		p
+			padding: 0 15% 
+			margin-top: 20px 
+	&:hover
+		.work__title
+			text-decoration: underline
+		.work__image
+			transform: rotateY(180deg)
