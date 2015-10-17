@@ -48,16 +48,16 @@
 // 	+jpg(bla)
 
 //fonts
-+font(Roboto Regular, roboto)
-+font(Roboto Light, roboto-light)
+// +font(Roboto Regular, roboto)
+// +font(Roboto Light, roboto-light)
 
 =rob
-	font-family: 'Roboto Regular', Arial, sans-serif
-	font-weight: normal
+	font-family: 'Roboto', Arial, sans-serif
+	font-weight: 400
 
 =rob-l
-	font-family: 'Roboto Light', Arial, sans-serif
-	font-weight: normal
+	font-family: 'Roboto', Arial, sans-serif
+	font-weight: 300
 
 body
 	min-width: 320px
@@ -78,31 +78,15 @@ body
 	+tr(0.3s ease)
 	&.menu-opened
 		.transform-bl
-			-webkit-transform: rotateY(-35deg) translateX(-210px)
-			-moz-transform: rotateY(-35deg) translateX(-210px)
-			-ms-transform: rotateY(-35deg) translateX(-210px)
-			-o-transform: rotateY(-35deg) translateX(-210px)
 			transform: rotateY(-35deg) translateX(-210px)
 		+r(520)
 			.transform-bl
-				-webkit-transform: rotateY(-45deg) translateX(-210px)
-				-moz-transform: rotateY(-45deg) translateX(-210px)
-				-ms-transform: rotateY(-45deg) translateX(-210px)
-				-o-transform: rotateY(-45deg) translateX(-210px)
 				transform: rotateY(-45deg) translateX(-210px)
 		+r(480)
 			.transform-bl
-				-webkit-transform: rotateY(-55deg) translateX(-210px)
-				-moz-transform: rotateY(-55deg) translateX(-210px)
-				-ms-transform: rotateY(-55deg) translateX(-210px)
-				-o-transform: rotateY(-55deg) translateX(-210px)
 				transform: rotateY(-55deg) translateX(-210px)
 		+r(320)
 			.transform-bl
-				-webkit-transform: rotateY(-55deg) translateX(-297px)
-				-moz-transform: rotateY(-55deg) translateX(-297px)
-				-ms-transform: rotateY(-55deg) translateX(-297px)
-				-o-transform: rotateY(-55deg) translateX(-297px)
 				transform: rotateY(-55deg) translateX(-297px)
 
 .transform-bl

@@ -39,9 +39,15 @@ var dest = {
 
 //sass
 gulp.task('sass', function() {
-
+    //@todo compare by max-width value, not by
     var processors = [
         autoprefixer({browsers: ['last 4 versions'], cascade: false})
+ //       autoprefixer({browsers: ['last 4 versions'], cascade: false}),
+ //       mqpacker({
+ //   sort: function (a, b) {
+ //     return a.localeCompare(b);
+ //   }
+ // })
     ];
 
     return sass('src/sass/*.sass', {
