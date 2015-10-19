@@ -327,7 +327,8 @@ a { text-decoration: none; }
 @media only screen and (max-width: 600px) { .archive .archive__table table thead th.archive__worktitle div { position: absolute; left: -1000px; width: 1000px; top: 0; height: 100%; background: #2a2a2a; border-bottom: none; } }
 .archive .archive__table table thead th:last-child { position: relative; }
 .archive .archive__table table thead th:last-child div { position: absolute; left: 100%; width: 1000px; top: 0; height: 100%; background: #2a2a2a; }
-.archive .archive__table table td { position: relative; padding: 12px 0; text-align: left; font-size: 18px; font-family: "Roboto", Arial, sans-serif; font-weight: 300; color: #aaaaaa; border-bottom: 1px solid #383838; }
+.archive .archive__table table td { position: relative; padding: 12px 0; text-align: left; font-size: 15px; font-family: "Roboto", Arial, sans-serif; font-weight: 300; color: #aaaaaa; border-bottom: 1px solid #383838; }
+.archive .archive__table table td.archive__worktitle { font-size: 18px; }
 .archive .archive__table table td a { text-decoration: none; color: #aaaaaa; }
 .archive .archive__table table td:first-child { text-align: center; width: 50px; padding-right: 10px; }
 .archive .archive__table table td:first-child div { position: absolute; left: -1000px; width: 1000px; top: 0; height: 100%; border-bottom: 1px solid #383838; box-sizing: content-box; }
@@ -341,7 +342,10 @@ a { text-decoration: none; }
 .archive .archive__table table tr:hover td:last-child div { background-color: #c30916; background-image: linear-gradient(to right, #c30916, #0f2ff5); background-attachment: fixed; }
 .archive .archive__table table .archive__worktitle { padding-left: 15px; }
 @media only screen and (max-width: 600px) { .archive .archive__table table .archive__worktitle div { position: absolute; left: -1000px; width: 1000px; top: 0; height: 100%; border-bottom: 1px solid #383838; box-sizing: content-box; } }
+.archive .archive__table table .archive__workagency { padding-left: 15px; }
 @media only screen and (max-width: 960px) { .archive .archive__table table .archive__workagency { display: none; } }
+.archive .archive__table table .archive__type { padding-left: 15px; }
+.archive .archive__table table .archive__date { padding-left: 15px; }
 @media only screen and (max-width: 600px) { .archive .archive__table table td:first-child, .archive .archive__table table th:first-child { display: none; } }
 @media only screen and (max-width: 600px) { .archive .archive__table table .archive__type, .archive .archive__table table .archive__date { display: none; } }
 
