@@ -3,6 +3,7 @@
 	text-align: center
 	background: #202020
 	padding: 43px 0 38px 0
+	z-index: 10 
 
 	.archive__title
 		font-weight: normal
@@ -15,7 +16,8 @@
 		position: absolute
 		left: 50%
 		bottom: -15px
-		margin-left: -40px
+		// margin-left: -40px
+		transform: translate(-50%, 0)
 		background: #202020
 		text-decoration: none
 		color: #fff
@@ -122,9 +124,11 @@
 						height: 100%
 						border-bottom: 1px solid #383838
 						box-sizing: content-box
-			tr
+			thead
+				tr,th
+					background: #2a2a2a
+			tbody tr
 				background-attachment: fixed
-				cursor: pointer
 				&:hover
 					+gh(#c30916,#0f2ff5)
 					td
@@ -167,6 +171,8 @@
 				padding-left: 15px
 			.archive__date
 				padding-left: 15px
+			tbody td
+				cursor: pointer
 			td,th
 				&:first-child
 					+r(600)

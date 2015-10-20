@@ -9,12 +9,37 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
 </head>
 <body>
+<!-- begin mobile-menu  -->
+<div class="mobile-menu js-menu">
+	<i class="close-ico js-close"><span></span></i>
+	<div class="logo">
+		<a href="#" class="logo__img"><img src="img/svg/logo.svg" alt="tDeser"></a>
+		<span class="logo__name">Interactive designer</span>
+	</div>
+	<ul class="menu">
+		<li class="menu__li"><a class="menu__link" href="#">Works</a></li>
+		<li class="menu__li"><a class="menu__link" href="#">About</a></li>
+		<li class="menu__li"><a class="menu__link" href="#">Contact</a></li>
+	</ul>
+	<div class="get">
+		<p class="get__note">Need a high quality web design or interface design?</p>
+		<a href="#" class="btn btn_quote">
+			<span class="btn__top"></span>
+			<span class="btn__left"></span>
+			<span class="btn__right"></span>
+			<span class="btn__bottom"></span>
+			<i class="get-ico"></i>Get a quote
+		</a>
+	</div>
+</div>
+<!-- end mobile-menu -->
+<div class="overlay"></div>
 <!-- BEGIN  out-->
 <div class="out">
 	<div class="transform-bl">
@@ -90,34 +115,6 @@
 			</div>
 		</div>
 		<!-- end get  -->
-	</div>
-</div>
-<!-- END out-->
-<!-- begin mobile-menu  -->
-<div class="mobile-menu js-menu">
-	<i class="close-ico js-close"><span></span></i>
-	<div class="logo">
-		<a href="#" class="logo__img"><img src="img/svg/logo.svg" alt="tDeser"></a>
-		<span class="logo__name">Interactive designer</span>
-	</div>
-	<ul class="menu">
-		<li class="menu__li"><a class="menu__link" href="#">Works</a></li>
-		<li class="menu__li"><a class="menu__link" href="#">About</a></li>
-		<li class="menu__li"><a class="menu__link" href="#">Contact</a></li>
-	</ul>
-	<div class="get">
-		<p class="get__note">Need a high quality web design or interface design?</p>
-		<a href="#" class="btn btn_quote">
-			<span class="btn__top"></span>
-			<span class="btn__left"></span>
-			<span class="btn__right"></span>
-			<span class="btn__bottom"></span>
-			<i class="get-ico"></i>Get a quote
-		</a>
-	</div>
-</div>
-<!-- end mobile-menu -->
-<div class="overlay"></div>
 <!-- begin works  -->
 <div class="works">
 	<h2 class="works__title">Selected Works</h2>
@@ -277,12 +274,28 @@ helps firms determine what</p>
 	</a>
 </div>
 <!-- end archive -->
-<!-- begin content  -->
-<div class="content">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem sit, iste, magnam eveniet iure ex nostrum cum temporibus totam fuga accusamus modi provident numquam cupiditate illum distinctio asperiores. Odit, error!
+<!-- begin about  -->
+<div class="about">
+	<h2 class="about__sidetitle">About Me</h2>
+	
+	<div class="about__in">
+		<div class="about__bg"></div>
+		<div class="about__title">Interactive<br>Designer</div>
+		<div class="about__col1">
+			<p>My name is Serj Tiutyk. I’m Interactive designer. I design strategy is a discipline which helps firms determine what to make and do, why do it and how to innovate contextually, both immediately and over the long term. This process involves the interplay between design and business strategy. Design strategy is a discipline which helps firms determine what to make and do, why do it and how to innovate contextually, both immediately and over the long term. </p>
+		</div>
+		<div class="about__col2">
+			<p>This process involves the interplay between design and business strategy. Design strategy is a discipline which helps firms determine what to make and do, why do it and how to innovate contextually. </p>
+		</div>
+		<div class="about__links">
+			<a href='#' class="about__cv"><i class="icon icon-cv"></i><span>Download my CV</span></a>
+			<a href='#' class="about__quote"><i class="icon icon-quote"></i><span>Download my CV</span></a>
+		</div>
+		
+		<div class="about__bottombg"></div>
+	</div>
 </div>
-<!-- end content -->
-
+<!-- end about -->
 <!-- begin footer  -->
 <div class="footer">
 	<!-- footer__top -->
@@ -352,5 +365,11 @@ helps firms determine what</p>
 	<!-- end footer__bottom -->
 </div>
 <!-- end footer -->
+	</div>
+</div>
+<!-- END -->
+
+
+
 </body>
 </html>
