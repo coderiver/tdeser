@@ -45,4 +45,32 @@ $(document).ready(function() {
 		$('.overlay').removeClass('is-visible');
 		$('.js-menu').removeClass('is-active');
 	});
+
+
+
+	// team slider
+	$('.js-reviews').slick({
+	  infinite: true,
+	  dots: true,
+	  dotsClass: "reviews__dots",
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  nextArrow: $('.reviews__next'),
+	  prevArrow: $('.reviews__prev'),
+
+	  responsive: [
+	      {
+	        breakpoint: 868,
+	        settings: {
+	          slidesToShow: 2
+	        }
+	      },
+	      {
+	        breakpoint: 580,
+	        settings: {
+	          slidesToShow: 1
+	        }
+	      }
+	    ]
+	});
 });
