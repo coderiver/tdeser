@@ -71,6 +71,8 @@ html { box-sizing: border-box; }
 
 .icon-art:before { content: ""; }
 
+* { -webkit-font-smoothing: antialiased; }
+
 body { min-width: 320px; font-size: 12px; line-height: 1.4; transition-delay: 0.5s; font-family: "Roboto", Arial, sans-serif; font-weight: 400; }
 body.menu-opened { overflow: hidden; background-color: #212121; transition: background-color 0.1s; }
 
@@ -308,9 +310,9 @@ a { text-decoration: none; }
 .work .work__tags { font-size: 12px; color: #aaaaaa; text-align: center; }
 .work .work__flipper { -webkit-perspective: 1000; perspective: 1000; }
 .work .work__image { transition: 0.5s; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; position: relative; }
-.work .work__front, .work .work__back { -webkit-backface-visibility: hidden; backface-visibility: hidden; position: absolute; top: 0; left: 0; }
+.work .work__front, .work .work__back { -webkit-backface-visibility: hidden; backface-visibility: hidden; position: absolute; top: 0; left: 0; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
 .work .work__front { z-index: 2; -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
-.work .work__back { -webkit-transform: rotateY(180deg); transform: rotateY(180deg); background: #282828; position: absolute; top: 0; left: 0; bottom: 0; right: 0; font-size: 15px; text-align: center; color: #fff; line-height: 20px; padding-top: 100px; }
+.work .work__back { -webkit-transform: rotateY(180deg); transform: rotateY(180deg); background: #282828; position: absolute; top: 0; left: 0; bottom: 0; right: 0; font-size: 15px; text-align: center; color: #fff; line-height: 20px; padding-top: 100px; z-index: 1; }
 @media only screen and (max-width: 800px) { .work .work__back { padding-top: 50px; } }
 @media only screen and (max-width: 500px) { .work .work__back { padding-top: 25px; } }
 .work .work__back i { font-size: 20px; }
