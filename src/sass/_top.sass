@@ -1,6 +1,8 @@
 .header
 	position: relative
 	background-color: rgba(#000, 0.5)
+	.slick-next,.slick-prev
+		// font-size: 10px 
 	&__top
 		position: absolute
 		top: 0
@@ -67,6 +69,8 @@
 		&-bl
 			width: 33.33%
 			float: left
+			line-height: 20px 
+			font-size: 18px 
 		+r(950)
 			font-size: 15px
 		+r(640)
@@ -99,7 +103,7 @@
 		&:before
 			@extend %icon
 			content: $icon-prev
-			font-size: 15px
+			font-size: 10px
 		&:hover
 			left: 15px
 	.slick-next
@@ -108,7 +112,7 @@
 		&:before
 			@extend %icon
 			content: $icon-next
-			font-size: 15px
+			font-size: 10px
 		&:hover
 			right: 15px
 	.slick-slide
@@ -399,13 +403,20 @@
 	&__link
 		position: relative
 		color: #fff
-		padding: 10px 5px
+		padding: 10px 0px
 		font-size: 18px
+		&:after
+			position: absolute
+			content: "" 
+			left: -5px 
+			right: -5px 
+			top: 0 
+			height: 100% 
 		&:before
 			content: ""
 			position: absolute
-			bottom: 0
-			left: 0
+			bottom: 10px
+			left: 0px
 			width: 0
 			height: 1px
 			background: #FFF

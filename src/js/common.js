@@ -1,5 +1,10 @@
 $(document).ready(function() {
-	
+	$('.archive__table tbody tr').hover(function() {
+		$('.archive__table tr').removeClass('is-active');
+		$(this).addClass('is-active');
+	}, function() {
+		/* Stuff to do when the mouse leaves the element */
+	});
 	$('.js-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1

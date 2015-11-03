@@ -56,12 +56,13 @@
 					font-size: 18px
 					+rob-l
 					line-height: 1
-					color: #fff
+					color: #fff !important
 					padding: 12px 0
 					background: #2a2a2a
 					&:first-child
 						position: relative
-						text-align: center
+						text-align: left
+						width: 30px 
 						div
 							position: absolute
 							left: -1000px
@@ -104,8 +105,8 @@
 					text-decoration: none
 					color: #aaaaaa
 				&:first-child
-					text-align: center
-					width: 50px
+					text-align: left
+					width: 30px
 					padding-right: 10px
 					div
 						position: absolute
@@ -129,7 +130,7 @@
 					background: #2a2a2a
 			tbody tr
 				background-attachment: fixed
-				&:hover
+				&:hover,&.is-active
 					+gh(#c30916,#0f2ff5)
 					td
 						color: #fff
@@ -151,8 +152,14 @@
 							background-color: #c30916
 							+gh(#c30916,#0f2ff5)
 							background-attachment: fixed
+			tbody
+				td:first-child
+					text-align: left
 			.archive__worktitle
 				padding-left: 15px
+				font-size: 18
+				font-weight: 300  
+				color: #aaaaaa 
 				div
 					+r(600)
 						position: absolute
@@ -165,12 +172,18 @@
 
 			.archive__workagency
 				padding-left: 15px
+				font-size: 15px 
+				font-weight: 400 
 				+r(960)
 					display: none
 			.archive__type
 				padding-left: 15px
+				font-size: 15px 
+				font-weight: 400 
 			.archive__date
 				padding-left: 15px
+				font-size: 15px 
+				font-weight: 400 
 			tbody td
 				cursor: pointer
 			td,th
