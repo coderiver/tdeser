@@ -28,6 +28,18 @@ $(document).ready(function() {
 	}, function() {
 		/* Stuff to do when the mouse leaves the element */
 	});
+	$('.archive__table tbody tr').click(function(event) {
+		window.location = "http://www.yoururl.com";
+		return false
+	});
+
+	//scrollto
+	$('.js-goto').click(function(event) {
+		id = $(this).data('goto')
+		 $('html, body').animate({
+	        scrollTop: $("#"+id).offset().top
+	    }, 600);
+	});
 	$('.js-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1
@@ -59,7 +71,7 @@ $(document).ready(function() {
 	  dots: true,
 	  dotsClass: "reviews__dots",
 	  slidesToShow: 3,
-	  slidesToScroll: 1,
+	  slidesToScroll: 3,
 	  nextArrow: $('.reviews__next'),
 	  prevArrow: $('.reviews__prev'),
 

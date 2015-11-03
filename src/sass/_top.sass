@@ -4,15 +4,23 @@
 	.slick-next,.slick-prev
 		// font-size: 10px 
 	&__top
-		position: absolute
+		position: fixed
 		top: 0
 		left: 0
 		right: 0
-		padding-top: 50px
+		// padding-top: 50px
 		z-index: 2
 		+clr
-		+r(1280)
-			padding-top: 40px
+		height: 50px
+		padding-top: 10px 
+		// +r(1280)
+		// 	padding-top: 40px
+		&.is-white
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08)
+			background: #ccc  
+		&.is-black
+			background: #000 
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08)
 	&__center
 		position: absolute
 		top: 0
@@ -29,8 +37,6 @@
 		color: #fff
 		z-index: 2
 		background-image: url('../img/name.png')
-		-webkit-background-size: contain
-		-o-background-size: contain
 		background-size: contain
 		background-position: center center
 		background-repeat: no-repeat
@@ -152,6 +158,8 @@
 	&__name
 		display: inline-block
 		vertical-align: top
+		
+			
 	&__img
 		margin-right: 20px
 	&__name
@@ -159,6 +167,8 @@
 		color: #fff
 		line-height: 1
 		opacity: 0.7
+		.is-white &
+			color: #000 
 	+r(640)
 		&__name
 			display: none
@@ -405,6 +415,8 @@
 		color: #fff
 		padding: 10px 0px
 		font-size: 18px
+		.is-white &
+			color: #000 
 		&:after
 			position: absolute
 			content: "" 
@@ -421,6 +433,8 @@
 			height: 1px
 			background: #FFF
 			+tr(0.3s ease)
+			.is-white &
+				background: #000 
 		&:hover
 			&:before
 				width: 100%
