@@ -385,10 +385,10 @@ a { text-decoration: none; }
 @media only screen and (max-width: 1280px) { .about .about__bg { left: 60%; right: auto; margin-left: -80px; } }
 @media only screen and (max-width: 1024px) { .about .about__bg { left: 60%; right: 0; margin: 0; margin-left: -116px; width: 100%; height: 261.19403px; background-size: contain; background-position: 0 0; } }
 @media only screen and (max-width: 710px) { .about .about__bg { position: static; margin: 0 -20px; background-position: 50% 0; height: 210px; width: auto; background-size: 385.71429px 250.0px; background-position: 50% 0; margin-bottom: -50px; } }
-.about .about__bottombg { background: url(../img/about__bottombg.jpg) no-repeat 0 0; width: 983px; height: 650px; position: absolute; bottom: 0; right: -290px; z-index: 3; }
+.about .about__bottombg { background: url(../img/about__bottombg-1.jpg) no-repeat 0 0; width: 983px; height: 650px; position: absolute; bottom: 0; right: -290px; z-index: 3; }
 @media only screen and (max-width: 1280px) { .about .about__bottombg { left: 60%; right: auto; margin-left: -230px; background-position: 0 100%; } }
 @media only screen and (max-width: 1024px) { .about .about__bottombg { width: 733.58209px; height: 485.07463px; background-size: contain; background-position: 50% 100%; } }
-@media only screen and (max-width: 710px) { .about .about__bottombg { position: static; margin: 0 -20px; background-position: 50% 0; height: 210px; background-size: auto 325px; background-position: 0% 100%; } }
+@media only screen and (max-width: 710px) { .about .about__bottombg { position: static; margin: 0 -20px; width: auto; background-position: 50% 0; height: 210px; background-size: auto 325px; background-position: 50% 100%; } }
 .about .about__sidetitle { position: absolute; top: 60px; right: 100%; left: auto; font-family: "Roboto", Arial, sans-serif; font-weight: 300; color: #212121; font-size: 25px; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); -webkit-transform-origin: 100% 0; -ms-transform-origin: 100% 0; transform-origin: 100% 0; line-height: 1; height: 25px; white-space: nowrap; margin-right: -5px; }
 @media only screen and (max-width: 1345px) { .about .about__sidetitle { display: none; } }
 @media only screen and (max-width: 1280px) { .about .about__sidetitle { display: block; } }
